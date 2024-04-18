@@ -1,0 +1,95 @@
+create database employee;
+use employee;
+create table employee_data
+(
+Id int,
+Name varchar(40),
+City varchar(40),
+Email varchar(84),
+Mobile varchar(10),
+Salary int
+);
+
+drop table employee_data;
+
+INSERT INTO employee_data (Id, Name, City, Email, Mobile, Salary) VALUES
+(1, 'John Smith', 'New York', 'john.smith@example.com', '5551234567', 60000),
+(2, 'Jane Doe', 'Los Angeles', 'jane.doe@example.com', '5559876543', 65000),
+(3, 'Michael Johnson', 'Chicago', 'michael.johnson@example.com', '5552468135', 70000),
+(4, 'Emily Davis', 'Houston', 'emily.davis@example.com', '5553698521', 62000),
+(5, 'William Brown', 'Phoenix', 'william.brown@example.com', '5557852146', 68000),
+(6, 'Maria Garcia', 'Philadelphia', 'maria.garcia@example.com', '5559638527', 71000),
+(7, 'David Rodriguez', 'San Antonio', 'david.rodriguez@example.com', '5557418529', 64000),
+(8, 'Sarah Wilson', 'San Diego', 'sarah.wilson@example.com', '5558529637', 67000),
+(9, 'James Martinez', 'Dallas', 'james.martinez@example.com', '5553698527', 72000),
+(10, 'Ashley Anderson', 'San Jose', 'ashley.anderson@example.com', '5557859632', 69000),
+(11, 'Robert Taylor', 'Austin', 'robert.taylor@example.com', '5551472583', 73000),
+(12, 'Linda Thomas', 'Jacksonville', 'linda.thomas@example.com', '5553697412', 63000),
+(13, 'Charles Hernandez', 'Fort Worth', 'charles.hernandez@example.com', '5559876321', 74000),
+(14, 'Karen Lopez', 'Columbus', 'karen.lopez@example.com', '5551237896', 65000),
+(15, 'Nancy Young', 'Charlotte', 'nancy.young@example.com', '5554563219', 68000),
+(16, 'Paul King', 'San Francisco', 'paul.king@example.com', '5557418520', 75000),
+(17, 'Deborah Hill', 'Indianapolis', 'deborah.hill@example.com', '5559637412', 66000),
+(18, 'Daniel Scott', 'Seattle', 'daniel.scott@example.com', '5557896541', 71000),
+(19, 'Lisa Green', 'Denver', 'lisa.green@example.com', '5551239876', 69000),
+(20, 'Mark Adams', 'Washington', 'mark.adams@example.com', '5559876543', 76000),
+(21, 'Betty Baker', 'Boston', 'betty.baker@example.com', '5558529637', 67000),
+(22, 'Donald Gonzalez', 'El Paso', 'donald.gonzalez@example.com', '5553698521', 72000),
+(23, 'Donna Nelson', 'Nashville', 'donna.nelson@example.com', '5551234567', 70000),
+(24, 'George Carter', 'Detroit', 'george.carter@example.com', '5557859632', 73000),
+(25, 'Edward Mitchell', 'Memphis', 'edward.mitchell@example.com', '5559637412', 71000),
+(26, 'Ruth Perez', 'Portland', 'ruth.perez@example.com', '5557896541', 74000),
+(27, 'Stephen Roberts', 'Oklahoma City', 'stephen.roberts@example.com', '5553697412', 72000),
+(28, 'Helen Turner', 'Las Vegas', 'helen.turner@example.com', '5551237896', 75000),
+(29, 'Victor Phillips', 'Louisville', 'victor.phillips@example.com', '5557418520', 73000),
+(30, 'Amanda Campbell', 'Baltimore', 'amanda.campbell@example.com', '5558529637', 76000),
+(31, 'Debra Evans', 'Milwaukee', 'debra.evans@example.com', '5553698521', 74000),
+(32, 'Jerry Murphy', 'Albuquerque', 'jerry.murphy@example.com', '5559876543', 77000),
+(33, 'Janet Torres', 'Tucson', 'janet.torres@example.com', '5551234567', 75000),
+(34, 'Ryan Parker', 'Fresno', 'ryan.parker@example.com', '5557859632', 78000),
+(35, 'Francesco Sanders', 'Sacramento', 'francesco.sanders@example.com', '5559637412', 76000),
+(36, 'Gloria Morris', 'Kansas City', 'gloria.morris@example.com', '5557896541', 79000),
+(37, 'Eugene Sullivan', 'Long Beach', 'eugene.sullivan@example.com', '5553697412', 77000),
+(38, 'Mildred Perry', 'Mesa', 'mildred.perry@example.com', '5551237896', 80000),
+(39, 'Theresa Butler', 'Virginia Beach', 'theresa.butler@example.com', '5557418520', 78000),
+(40, 'Dennis Foster', 'Atlanta', 'dennis.foster@example.com', '5558529637', 81000),
+(41, 'Phillip Long', 'Colorado Springs', 'phillip.long@example.com', '5553698521', 79000),
+(42, 'Lori Bryant', 'Raleigh', 'lori.bryant@example.com', '5559876543', 82000),
+(43, 'Geraldine Alexander', 'Omaha', 'geraldine.alexander@example.com', '5551234567', 80000),
+(44, 'Sandra Russell', 'Miami', 'sandra.russell@example.com', '5557859632', 83000),
+(45, 'Brandon Griffin', 'Oakland', 'brandon.griffin@example.com', '5559637412', 81000),
+(46, 'Rose Matthews', 'Minneapolis', 'rose.matthews@example.com', '5557896541', 84000),
+(47, 'Julia Knight', 'Tulsa', 'julia.knight@example.com', '5553697412', 82000),
+(48, 'Harry Ferguson', 'Wichita', 'harry.ferguson@example.com', '5551237896', 85000),
+(49, 'Louise Marshall', 'New Orleans', 'louise.marshall@example.com', '5557418520', 83000),
+(50, 'Johnny Nichols', 'Cleveland', 'johnny.nichols@example.com', '5558529637', 86000);
+
+Select * from employee.employee_data;
+
+select Name from employee_data where salary<=60000;
+
+select Name from employee_data where salary>=50000;
+
+select Name from employee_data where salary in(81000,60000);
+
+Select  Id from employee_data where Name in ("Jane Doe", "Emily Davis");
+
+Select * from employee_data Order by id asc;
+
+Select * from employee_data Order by id desc;
+
+Select min(salary) from employee_data;
+
+select max(salary)  from employee_data;
+
+select avg(salary) from employee_data;
+
+Select sum(salary) from employee_data;
+
+Select count(Name) from employee_data;
+
+Select count(id) from employee_data;
+
+Select salary from employee_data group by salary;
+
+Select city, count(id) from employee_data group by city order by min(id) asc;
